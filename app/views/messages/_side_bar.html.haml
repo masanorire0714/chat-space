@@ -1,18 +1,17 @@
 %body
-  .Side-main
-    .side-bar__user--name
+  .Side-bar
+    .Side-bar__user
       .top-items
-        .name
-          masa
-      .second-items
-        .icon-edit
+        %p.top-items__name masa
+      .side-icon
+        = link_to "#", class: "side-icon__btn" do
           = icon('far', 'edit')
-        .icon-cog
+        = link_to "#", class: "side-icon__btn" do
           = icon('fa',  'cog') 
-    .side-bar__group--list
-      .side-bar__frame
-        .group__name
+    .group-list
+      .side-list
+        .side-list__name
           techcamp
-        .group__message--information
+        .side-list__information
           まだメッセージはありません
     

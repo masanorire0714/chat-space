@@ -1,43 +1,41 @@
 %body
   .Chat-main
     .Chat-main__group--info
-      .Chat-main__text
-        .heder__text--first
+      .heder-text
+        .heder-text__first
           test
-        .heder__text--second
+        .heder-text__second
           Member:name
-      .Chat-main__edit
-        .heder__edit
+      .heder-edit
+        .heder-edit__edit
           Edit  
-    .Chat-main__message--list
-      .Chat-main__message--info1
-        .Chat-main__message--name1
+    .list-message
+      .message-info
+        .message-info__message--name1
           masa
-        .Chat-main__message--date1
+        .message-info__message--date1
           2019/11/20(Wed) 17:43:01
-      .Chat-main__message--main1
-        .Chat-main__message--text
+      .message-text
+        .message-text__main1
           おはよう！
-      .Chat-main__message--info2
-        .Chat-main__message--name1
+      .message-info2
+        .message-info2__message--name2
           masa
-        .Chat-main__message--date2
+        .message-info2__message--date2
           2019/11/20(Wed) 17:43:34
-      .Chat-main__message--main2
-        .Chat-main__message--text
+      .message-text2
+        .message-text__main2
           今日は夜から雨
-    .Chat-main__message--form
-      .Chat-main__message--form-type
-        .Chat-main__message--form-content
-          .Chat-main__message--type-message
+    .message-form
+      .message-form__form-type
+        .form-content
+          .form-content__message
             type a message
-          .Chat-main__message--icon
+          .form-content__message--icon
             %label{class: "input-box__image"}
               = icon('far', 'image Form__icon')
               %input{type:"file"}
-        .Chat-main__message--form-send
-          .Chat-main__message--send
-            send
-
+        .form-send
+          %input.Form__submitBtn{"name": "commit", "type": "submit", "value": "Send"}
         
     
