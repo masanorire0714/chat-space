@@ -1,0 +1,41 @@
+%body
+  .Chat-main
+    .Chat-main__group--info
+      .heder-text
+        .heder-text__first
+          test
+        .heder-text__second
+          Member:name
+      .heder-edit
+        .heder-edit__edit
+          Edit  
+    .list-message
+      .message-info
+        .message-info__message--name1
+          masa
+        .message-info__message--date1
+          2019/11/20(Wed) 17:43:01
+      .message-text
+        .message-text__main1
+          おはよう！
+      .message-info2
+        .message-info2__message--name2
+          masa
+        .message-info2__message--date2
+          2019/11/20(Wed) 17:43:34
+      .message-text2
+        .message-text__main2
+          今日は夜から雨
+    .message-form
+      .message-form__form-type
+        .form-content
+          .form-content__message
+            type a message
+          .form-content__message--icon
+            %label{class: "input-box__image"}
+              = icon('far', 'image Form__icon')
+              %input{type:"file"}
+        .form-send
+          %input.Form__submitBtn{"name": "commit", "type": "submit", "value": "Send"}
+        
+    
