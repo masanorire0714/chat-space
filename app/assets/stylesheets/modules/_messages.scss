@@ -38,27 +38,39 @@
 .heder-edit{
   display: flex;
   align-items: center;
+  margin: 28px 40px 20px 20px;
+  
   &__edit{
-    margin: 28px 40px 20px 20px;
-    color: #38aef0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 16px;
+    border: #38aef0 1px solid;
+    height: 40px;
+    width: 72px; 
   }
 } 
-  
+
+a{
+  color: #38aef0;
+  text-decoration: none;
+}
+
 .list-message{
   width: calc(100vw - 300px);
   height: calc(100vh - 100px - 90px);
   background-color: #fafafa;
+  overflow: scroll;
 }
 
 .message-info{
   display: flex;padding: 35px 0 12px 40px;
-  &__message--name1{
+  &__name{
     color: #333333;
     font-size: 16px;
     margin: 0 5px 0 0;
   }
-  &__message--date1{
+  &__date{
     color: #999999;
     font-size: 12px;
   }
@@ -66,7 +78,7 @@
 
 .message-text{
   margin: 0 0 46px 40px;
-  &__main1{
+  &__main{
     color: #434a54;
     font-size: 14px;
   }
@@ -99,11 +111,17 @@
   background-color: #d2d2d2;
   display: flex;
   align-items: center;
-  &__form-type{
-    display: flex;
-    justify-content: space-between;
-  } 
 }
+
+.Form{
+  display: flex;
+  &__inputContent{
+    width: 900px;
+    height: 50px;
+    border: none;
+  }
+}
+
 
 
 
@@ -132,6 +150,11 @@
         display: none;  
       }       
   }
+}
+
+.far{
+  color: black;
+  margin: 0 10px 0 0;
 }
 
 .form-send{
@@ -184,10 +207,15 @@
   }
 }
 
+i{
+  color: #ffffff;
+}
+
 .group-list{
   width: 300px;
   height: calc(100vh - 100px);
   background-color: #2f3e51;
+  overflow: scroll;
 }
 .side-list{
   padding: 20px 20px 40px 20px;
