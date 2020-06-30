@@ -3,39 +3,28 @@
     .Chat-main__group--info
       .heder-text
         .heder-text__first
-          test
+          = @group.name
         .heder-text__second
-          Member:name
+          Member:
+          - @group.users.each do |user|
+            = user.name
       .heder-edit
         .heder-edit__edit
-          Edit  
+          = link_to edit_group_path (@group) do
+            = "Edit" 
     .list-message
-      .message-info
-        .message-info__message--name1
-          masa
-        .message-info__message--date1
-          2019/11/20(Wed) 17:43:01
-      .message-text
-        .message-text__main1
-          おはよう！
-      .message-info2
-        .message-info2__message--name2
-          masa
-        .message-info2__message--date2
-          2019/11/20(Wed) 17:43:34
-      .message-text2
-        .message-text__main2
-          今日は夜から雨
+      .MessageField
+        = render @messages
+
     .message-form
-      .message-form__form-type
+      = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+      
         .form-content
           .form-content__message
-            type a message
+            = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
           .form-content__message--icon
             %label{class: "input-box__image"}
               = icon('far', 'image Form__icon')
-              %input{type:"file"}
+              = f.file_field :image
         .form-send
           %input.Form__submitBtn{"name": "commit", "type": "submit", "value": "Send"}
-        
-    
