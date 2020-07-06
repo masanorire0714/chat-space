@@ -2,8 +2,8 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class="MessageField" data-message-id=${message.id}>
-          <div class="MessageBox">
+        `
+          <div class="MessageBox" data-message-id=${message.id}>
             <div class="message-info">
              <div class="message-info__name">
                 ${message.user_name}
@@ -21,12 +21,12 @@ $(function(){
             </div>
             <img class="Message-image" src="${message.image}">
           </div>
-         </div>`
+         `
        return html;
      } else {
       let html =
-      `<div class="MessageField" data-message-id=${message.id}>
-        <div class="MessageBox">
+      `
+        <div class="MessageBox" data-message-id=${message.id}>
           <div class="message-info">
             <div class="message-info__name">
               ${message.user_name}
@@ -43,7 +43,7 @@ $(function(){
             </div>
           </div>
         </div>
-      </div>`
+      `
       return html;
     };
   }
